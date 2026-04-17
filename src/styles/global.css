@@ -281,6 +281,14 @@ section {
   box-shadow: 0 8px 28px rgba(15, 36, 64, 0.15);
 }
 
+.pillar-icon {
+  display: block;
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 1.2rem;
+  object-fit: contain;
+}
+
 .pillar-card h3 {
   color: var(--darkest-navy);
   font-size: 1.4rem;
