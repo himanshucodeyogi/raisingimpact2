@@ -1,0 +1,130 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const team = [
+  {
+    name: 'Vikrant Bhargava',
+    img: 'https://raisingimpact.org/wp-content/uploads/2025/11/vikrant-120x120.jpg',
+    linkedin: 'https://uk.linkedin.com/in/vikrant-bhargava'
+  },
+  {
+    name: 'Luke Ding',
+    img: 'https://raisingimpact.org/wp-content/uploads/2025/11/luke-120x120.jpg',
+    linkedin: 'https://www.linkedin.com/in/lukeding2288/'
+  },
+  {
+    name: 'Rukmini Pandit',
+    img: 'https://raisingimpact.org/wp-content/uploads/2025/11/rukmini-120x120.jpg',
+    linkedin: 'https://sg.linkedin.com/in/rukmini-pandit-b0b82b81'
+  },
+  {
+    name: 'Tejaswini Vondivillu',
+    img: 'https://raisingimpact.org/wp-content/uploads/2025/11/tejaswini-120x120.jpg',
+    linkedin: 'https://in.linkedin.com/in/tejaswini-vondivillu-308152198'
+  },
+  {
+    name: 'Murugan Vasudevan',
+    img: 'https://raisingimpact.org/wp-content/uploads/2025/11/murugan-120x120.jpg',
+    linkedin: 'https://in.linkedin.com/in/muruganvasudevan'
+  },
+  {
+    name: 'Ratish Balakrishnan',
+    img: 'https://raisingimpact.org/wp-content/uploads/2025/11/ratish-120x120.jpg',
+    linkedin: 'https://in.linkedin.com/in/rathishbalakrishnan'
+  },
+  {
+    name: 'Arun NS',
+    img: 'https://raisingimpact.org/wp-content/uploads/2025/11/arun-ns-120x120.jpg',
+    linkedin: 'https://www.linkedin.com/in/arun-ns-62a7864/'
+  },
+  {
+    name: 'Pradnya Nikam',
+    img: 'https://raisingimpact.org/wp-content/uploads/2025/11/pradnya-120x120.jpg',
+    linkedin: 'https://in.linkedin.com/in/pradnya-nikam-104957173'
+  },
+  {
+    name: 'Ritika Ramasuri',
+    img: 'https://raisingimpact.org/wp-content/uploads/2025/11/ritika-120x120.jpg',
+    linkedin: 'https://in.linkedin.com/in/ritika-ramasuri'
+  }
+];
+---
+<Layout title="About Us — Raising Impact" active="about">
+  <section class="page-header" id="top">
+    <h1>Raising Impact</h1>
+    <p class="tagline">Guiding Philanthropy With Rigour</p>
+    <hr class="page-header-divider" />
+  </section>
+
+  <section class="content-section">
+    <div class="section-container">
+      <p>RaisingImpact.Org (RIO) aims to maximise the impact of philanthropic capital in India and across Asia. We provide analytically anchored, regionally rooted, bespoke philanthropic advisory service to bridge the persistent gap between philanthropic intent and measurable outcomes.</p>
+      <p>Inspired by global leaders like Founders Pledge and GiveWell, RIO brings analytical discipline to the Indian landscape where state-level variations, local nuance, and execution quality make all the difference. Our mission is to help philanthropists deploy their capital with clarity, evidence, and confidence.</p>
+      <p>RIO’s purpose is to steer philanthropic capital to organisations capable of delivering outsized, scalable impact.</p>
+    </div>
+  </section>
+
+  <section class="content-section alt">
+    <div class="section-container">
+      <h2>Our Journey So Far</h2>
+      <p>RIO began with a pilot research study in Early Childhood Care & Education (ECCE). The team mapped sector needs, capital flows, effective interventions, and credible nonprofits across India.</p>
+      <p>Findings included a 17x impact multiple for Anganwadi (child care centres) capacity-building and Maharashtra’s (Indian state) paradox of high CSR funding but poor child well-being outcomes.</p>
+      <p>RIO is delighted to be working with our first client focused on strategic investments in income improvement for small and marginal farmers applying our methodology to deliver actionable, contextspecific recommendations.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="section-container">
+      <h2>What We Offer</h2>
+      <p>RIO unlocks high-impact philanthropy through two core channels:</p>
+      <h3>Public Knowledge Goods</h3>
+      <p>Open-access, public-benefit resources to empower the broader philanthropic ecosystem to help facilitate access to rigorous analysis and help donors at all levels make informed, impactful decisions. This includes:</p>
+      <ul>
+        <li>Independent sector reports</li>
+        <li>Cause-area analyses</li>
+        <li>Cost-effectiveness analysis (CEA) playbooks</li>
+        <li>Curated recommendations of credible nonprofits</li>
+      </ul>
+      <h3>Bespoke Philanthropy Advisory</h3>
+      <p>Our advisory blends actionable research, granular data, and deep sector expertise to match donor intent with high-leverage opportunities.</p>
+    </div>
+  </section>
+
+  <section class="content-section alt">
+    <div class="section-container">
+      <h2>Our Team</h2>
+      <p>The RIO team brings together decades of experience across Indian philanthropy, public policy, nonprofit operations, and sector research. We combine:</p>
+      <ul>
+        <li>Analytical depth</li>
+        <li>On-ground understanding</li>
+        <li>Strong regional insight</li>
+        <li>A commitment to evidence and measurable outcomes</li>
+      </ul>
+      <p>Collaboration is at the heart of our work—whether with philanthropists, NGOs, state governments, or peer research organisations.</p>
+    </div>
+  </section>
+
+  <section class="team-section">
+    <div class="section-container">
+      <h2 style="color: var(--darkest-navy); font-size: 2rem; margin-bottom: 1rem; border-left: 4px solid var(--rich-gold); padding-left: 1rem;">Founding Team</h2>
+      <div class="team-grid">
+        {team.map((member) => (
+          <div class="team-card">
+            <img class="team-photo" src={member.img} alt={member.name} loading="lazy" />
+            <p class="name">{member.name}</p>
+            <a class="team-linkedin" href={member.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${member.name} on LinkedIn`}>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/>
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="back-to-top-wrap">
+    <a href="#top" class="back-to-top">Back To Top</a>
+  </div>
+</Layout>
