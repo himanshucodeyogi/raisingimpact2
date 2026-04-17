@@ -8,7 +8,10 @@ import Layout from '../layouts/Layout.astro';
   keywords="Raising Impact, philanthropy advisory India, high-impact giving, cost-effectiveness analysis, evidence-based philanthropy, effective giving, RIO"
 >
   <section class="hero">
-    <video class="hero-video" autoplay muted loop playsinline preload="auto">
+    <video class="hero-video hero-video-a is-active" autoplay muted playsinline preload="auto">
+      <source src="/hero-bg.mp4" type="video/mp4" />
+    </video>
+    <video class="hero-video hero-video-b" muted playsinline preload="auto">
       <source src="/hero-bg.mp4" type="video/mp4" />
     </video>
     <div class="hero-overlay"></div>
@@ -19,6 +22,53 @@ import Layout from '../layouts/Layout.astro';
       <h2>Evidence-led advisory for high-impact giving</h2>
       <p class="lead">We help philanthropists maximise social impact through rigorous research, cost-effectiveness analysis, and transparent methods.</p>
     </div>
+
+    <script is:inline>
+      (() => {
+        const a = document.querySelector('.hero-video-a');
+        const b = document.querySelector('.hero-video-b');
+        if (!a || !b) return;
+
+        const reveal = () => a.classList.add('is-ready');
+        if (a.readyState >= 3) reveal();
+        a.addEventListener('loadeddata', reveal, { once: true });
+        a.addEventListener('canplay', reveal, { once: true });
+        a.addEventListener('playing', reveal, { once: true });
+
+        const SWITCH_GAP = 0.4;
+        const tryPlay = (v) => {
+          const p = v.play();
+          if (p && typeof p.catch === 'function') p.catch(() => {});
+        };
+
+        const attach = (current, next) => {
+          let switched = false;
+          const handler = () => {
+            if (!current.duration || isNaN(current.duration)) return;
+            if (!switched && current.currentTime >= current.duration - SWITCH_GAP) {
+              switched = true;
+              next.currentTime = 0;
+              tryPlay(next);
+              next.classList.add('is-active');
+              next.classList.add('is-ready');
+              current.classList.remove('is-active');
+
+              setTimeout(() => {
+                current.pause();
+                current.currentTime = 0;
+              }, 900);
+
+              current.removeEventListener('timeupdate', handler);
+              attach(next, current);
+            }
+          };
+          current.addEventListener('timeupdate', handler);
+        };
+
+        attach(a, b);
+        tryPlay(a);
+      })();
+    </script>
   </section>
 
   <section class="pillars">
