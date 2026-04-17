@@ -3,15 +3,61 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 
-const { title, active } = Astro.props;
+const {
+  title,
+  active,
+  description = 'Raising Impact (RIO) provides analytically anchored, regionally rooted philanthropic advisory. Evidence-led guidance for high-impact giving across India and Asia.',
+  keywords = 'Raising Impact, RaisingImpact.Org, RIO, philanthropy advisory India, effective giving, cost-effectiveness analysis, philanthropic capital, high-impact philanthropy, India philanthropy, Asia philanthropy, evidence-based giving',
+  image = '/logo.png'
+} = Astro.props;
+
+const siteUrl = 'https://raisingimpact.org';
+const canonical = new URL(Astro.url.pathname, siteUrl).href;
+const ogImage = new URL(image, siteUrl).href;
 ---
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/logo.png" />
+
     <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content="Raising Impact" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonical} />
+
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+
+    <meta name="theme-color" content="#0F2440" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Raising Impact" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content="en_IN" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Raising Impact',
+      alternateName: 'RaisingImpact.Org',
+      url: siteUrl,
+      logo: `${siteUrl}/logo.png`,
+      description: 'Evidence-led advisory for high-impact giving. Analytically anchored, regionally rooted philanthropic advisory across India and Asia.',
+      email: 'rukmini@raisingimpact.org',
+      areaServed: ['India', 'Asia']
+    })} />
   </head>
   <body>
     <Header active={active} />
