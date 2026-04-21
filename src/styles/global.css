@@ -369,6 +369,106 @@ section {
   border: none;
 }
 
+/* How We Work */
+.how-we-work-section {
+  background-color: var(--darkest-navy);
+  padding: 3rem 0;
+}
+
+.hww-heading {
+  color: var(--rich-gold);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  border-left: 4px solid var(--rich-gold);
+  padding-left: 1rem;
+}
+
+.hww-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  border-left: 1px solid rgba(255,255,255,0.15);
+}
+
+.hww-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  padding: 2rem 1.8rem;
+  border-right: 1px solid rgba(255,255,255,0.15);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.hww-number {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--rich-gold);
+  line-height: 1;
+  flex-shrink: 0;
+  min-width: 2.8rem;
+}
+
+.hww-title {
+  color: var(--rich-gold);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.hww-desc {
+  color: #e0ddd5;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .hww-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Partner Table */
+.partner-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+}
+
+.partner-table th,
+.partner-table td {
+  text-align: left;
+  padding: 0.85rem 1.1rem;
+  border: 1px solid #d4c9a8;
+}
+
+.partner-table thead tr {
+  background-color: var(--darkest-navy);
+  color: #fff;
+}
+
+.partner-table thead th {
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.partner-table tbody tr:nth-child(odd) {
+  background-color: var(--beige);
+}
+
+.partner-table tbody tr:nth-child(even) {
+  background-color: #fff;
+}
+
+.partner-table tbody td:first-child {
+  font-weight: 600;
+  color: var(--darkest-navy);
+  white-space: nowrap;
+}
+
 /* Team */
 .team-section {
   background-color: var(--beige);
