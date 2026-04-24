@@ -34,3 +34,5 @@ Thumbs.db
 
 # Tool-specific
 .claude/
+.vercel
+.env*.local
