@@ -280,7 +280,13 @@ footer {
   border-top: 3px solid var(--gold);
   padding: 36px 32px;
   border-radius: 2px;
-  box-shadow: 0 2px 16px rgba(15,36,64,0.07);
+  box-shadow: 0 4px 20px rgba(15,36,64,0.10);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.pillar-card:hover {
+  box-shadow: 0 12px 36px rgba(15,36,64,0.16);
+  transform: translateY(-4px);
 }
 
 .pillar-icon {
@@ -361,6 +367,56 @@ footer {
   margin: 0 auto;
 }
 
+.intro-quote-mark {
+  font-family: 'Playfair Display', serif;
+  font-size: 7rem;
+  line-height: 0.6;
+  color: var(--gold);
+  opacity: 0.35;
+  display: block;
+  margin-bottom: 16px;
+  user-select: none;
+}
+
+.intro-lead {
+  font-size: 1.06rem;
+  color: var(--slate);
+  line-height: 1.88;
+  margin-bottom: 28px;
+}
+
+.intro-lead strong {
+  color: var(--navy-dark);
+  font-weight: 600;
+}
+
+.mission-callout {
+  background: linear-gradient(135deg, var(--beige) 0%, rgba(232,224,208,0.4) 100%);
+  border-left: 4px solid var(--gold);
+  border-radius: 0 6px 6px 0;
+  padding: 20px 28px;
+  margin: 8px 0 32px;
+}
+
+.mission-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.mission-callout p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.18rem;
+  color: var(--navy-dark);
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
 .about-intro p {
   font-size: 1.02rem;
   color: var(--slate);
@@ -400,7 +456,66 @@ footer {
   font-size: 1rem;
   color: var(--slate);
   line-height: 1.85;
-  margin-bottom: 20px;
+  margin-bottom: 0;
+}
+
+/* Journey timeline items */
+.journey-item {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 36px;
+}
+
+.journey-item:last-child { margin-bottom: 0; }
+
+.journey-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 11px;
+  height: 11px;
+  background: var(--gold);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(192,157,75,0.22);
+}
+
+.journey-item::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 22px;
+  width: 2px;
+  height: calc(100% + 14px);
+  background: rgba(192,157,75,0.25);
+}
+
+.journey-item:last-child::after { display: none; }
+
+/* Stat & date badges */
+.stat-pill {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy-dark);
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 1px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.02em;
+  vertical-align: middle;
+}
+
+.date-badge {
+  display: inline-block;
+  background: var(--navy);
+  color: var(--gold-sand);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+  vertical-align: middle;
 }
 
 /* ── HOW WE WORK ── */
@@ -423,6 +538,13 @@ footer {
   padding: 28px 24px;
   background: var(--soft-bg);
   border-radius: 2px;
+  box-shadow: 0 4px 20px rgba(15,36,64,0.08);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.step-card:hover {
+  box-shadow: 0 12px 32px rgba(15,36,64,0.14);
+  transform: translateY(-4px);
 }
 
 .step-num {
@@ -467,6 +589,9 @@ footer {
   border-collapse: collapse;
   margin-top: 32px;
   font-size: 0.95rem;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(15,36,64,0.09);
 }
 
 .partner-table th {
@@ -542,6 +667,16 @@ footer {
 
 .team-card {
   text-align: center;
+  background: var(--white);
+  border-radius: 8px;
+  padding: 24px 16px 20px;
+  box-shadow: 0 4px 20px rgba(15,36,64,0.08);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.team-card:hover {
+  box-shadow: 0 12px 32px rgba(15,36,64,0.14);
+  transform: translateY(-4px);
 }
 
 .team-avatar {
@@ -594,9 +729,18 @@ footer {
   padding: 72px 60px;
   display: grid;
   grid-template-columns: 1fr 1.4fr;
-  gap: 72px;
+  gap: 40px;
   max-width: 1100px;
   margin: 0 auto;
+}
+
+.contact-info,
+.contact-form {
+  background: var(--white);
+  border-radius: 6px;
+  padding: 40px 36px;
+  box-shadow: 0 4px 24px rgba(15,36,64,0.09);
+  border-top: 3px solid var(--gold);
 }
 
 .contact-info h2 {
