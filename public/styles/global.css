@@ -791,8 +791,8 @@ img {
 }
 
 .team-traits {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
   justify-content: center;
   gap: 10px;
   margin-bottom: 12px;
