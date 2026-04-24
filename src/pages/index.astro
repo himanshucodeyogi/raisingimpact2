@@ -1,62 +1,48 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
-
 <Layout title="Raising Impact — Guiding Philanthropy With Rigour">
 
-  <!-- HERO -->
   <section class="hero">
-    <video class="hero-video" autoplay muted loop playsinline>
+    <video class="hero-video is-active is-ready" autoplay loop muted playsinline preload="auto">
       <source src="/hero-bg.mp4" type="video/mp4" />
     </video>
-    <div class="hero-content">
-      <div class="hero-tag">Raising Impact</div>
-      <h1>Guiding Philanthropy With Rigour</h1>
-      <p class="hero-subtitle">Evidence-led advisory for high-impact giving</p>
-      <div class="hero-divider"></div>
-      <p class="hero-body">We help philanthropists maximise social impact through rigorous research, cost-effectiveness analysis, and transparent methods.</p>
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
+      <h1>Raising Impact</h1>
+      <p class="tagline">Guiding Philanthropy With Rigour</p>
+      <hr class="hero-divider" />
+      <h2>Evidence-led advisory for high-impact giving</h2>
+      <p class="lead">We help philanthropists maximise social impact through rigorous research, cost-effectiveness analysis, and transparent methods.</p>
     </div>
   </section>
 
-  <!-- PILLARS -->
   <section class="pillars">
-    <div class="pillars-grid">
-
-      <div class="pillar-card">
-        <svg class="pillar-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="6" y="28" width="8" height="10" rx="1" fill="#C09D4B" opacity="0.3"/>
-          <rect x="18" y="20" width="8" height="18" rx="1" fill="#C09D4B" opacity="0.5"/>
-          <rect x="30" y="12" width="8" height="26" rx="1" fill="#C09D4B"/>
-          <path d="M8 16 L18 10 L28 14 L38 6" stroke="#1E3A5A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="38" cy="6" r="2.5" fill="#1E3A5A"/>
-        </svg>
-        <h3>Evidence Led</h3>
-        <p>We prioritise data &amp; evidence when unpacking key problems, applying structured frameworks to evaluate problem-severity &amp; existing fund flows.</p>
+    <div class="section-container">
+      <div class="pillar-grid">
+        <div class="pillar-card">
+          <svg class="pillar-icon" aria-label="Evidence Led" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="var(--rich-gold)">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
+          </svg>
+          <h3>Evidence Led</h3>
+          <p>We prioritise data &amp; evidence when unpacking key problems, applying structured frameworks to evaluate problem-severity &amp; existing fund flows</p>
+        </div>
+        <div class="pillar-card">
+          <svg class="pillar-icon" aria-label="Regionally Rooted" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="var(--rich-gold)">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+          </svg>
+          <h3>Regionally Rooted</h3>
+          <p>We blend methodological rigour with deep regional understanding to deliver contextually grounded insights, verified through on-ground partnerships</p>
+        </div>
+        <div class="pillar-card">
+          <svg class="pillar-icon" aria-label="Cost-Effective" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="var(--rich-gold)">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+          </svg>
+          <h3>Cost-Effective</h3>
+          <p>We prioritize interventions that offer the most significant impact per dollar spent, with the potential to scale across regions</p>
+        </div>
       </div>
-
-      <div class="pillar-card">
-        <svg class="pillar-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="22" cy="22" r="14" stroke="#C09D4B" stroke-width="2"/>
-          <circle cx="22" cy="22" r="7" stroke="#1E3A5A" stroke-width="2"/>
-          <path d="M22 8 L22 36" stroke="#C09D4B" stroke-width="1.5" stroke-dasharray="3 3"/>
-          <path d="M8 22 L36 22" stroke="#C09D4B" stroke-width="1.5" stroke-dasharray="3 3"/>
-          <circle cx="22" cy="22" r="3" fill="#C09D4B"/>
-        </svg>
-        <h3>Regionally Rooted</h3>
-        <p>We blend methodological rigour with deep regional understanding to deliver contextually grounded insights, verified through on-ground partnerships.</p>
-      </div>
-
-      <div class="pillar-card">
-        <svg class="pillar-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="22" cy="22" r="14" stroke="#C09D4B" stroke-width="2"/>
-          <path d="M22 14 L22 18" stroke="#C09D4B" stroke-width="2" stroke-linecap="round"/>
-          <path d="M22 26 L22 30" stroke="#C09D4B" stroke-width="2" stroke-linecap="round"/>
-          <path d="M17 19.5 C17 17.5 19 16 22 16.5 C25 17 26 19 24 20.5 C22 22 18 22 18 24.5 C18 26.5 20 28 22 27.5 C24 27 26 25.5 26 23.5" stroke="#1E3A5A" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-        <h3>Cost-Effective</h3>
-        <p>We prioritize interventions that offer the most significant impact per dollar spent, with the potential to scale across regions.</p>
-      </div>
-
     </div>
   </section>
 

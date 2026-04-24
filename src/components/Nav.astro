@@ -1,45 +1,60 @@
 ---
 const pathname = Astro.url.pathname;
-const isHome = pathname === '/';
-const isAbout = pathname === '/about' || pathname === '/about/';
+const isHome    = pathname === '/';
+const isAbout   = pathname === '/about' || pathname === '/about/';
 const isContact = pathname === '/contact' || pathname === '/contact/';
 ---
 
-<nav>
-  <a href="/" class="nav-brand">
-    <img src="/logo.png" alt="RaisingImpact logo" class="nav-logo" />
-    <span class="nav-brand-name">RaisingImpact</span>
-  </a>
+<header class="site-header">
+  <div class="header-container">
+    <a href="/" class="brand">
+      <img src="/logo.png" alt="Raising Impact logo" />
+      <span class="brand-text">Raising<span>Impact</span></span>
+    </a>
 
-  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
+    <button
+      class="nav-toggle"
+      aria-label="Toggle navigation menu"
+      aria-expanded="false"
+      aria-controls="site-nav"
+    >
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
 
-  <ul class="nav-links">
-    <li><a href="/" class={isHome ? 'active' : ''}>Home</a></li>
-    <li><a href="/about" class={isAbout ? 'active' : ''}>About Us</a></li>
-    <li><a href="/contact" class={isContact ? 'active' : ''}>Contact Us</a></li>
-  </ul>
-</nav>
+    <nav class="site-nav" id="site-nav">
+      <ul>
+        <li><a href="/"        class={isHome    ? 'active' : ''}>Home</a></li>
+        <li><a href="/about"   class={isAbout   ? 'active' : ''}>About Us</a></li>
+        <li><a href="/contact" class={isContact ? 'active' : ''}>Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
 <script>
   const toggle = document.querySelector('.nav-toggle') as HTMLButtonElement;
-  const links  = document.querySelector('.nav-links') as HTMLElement;
+  const header = document.querySelector('.site-header') as HTMLElement;
 
-  toggle?.addEventListener('click', () => {
-    const open = links.classList.toggle('open');
-    toggle.classList.toggle('open', open);
-    toggle.setAttribute('aria-expanded', String(open));
-  });
+  if (toggle && header) {
+    toggle.addEventListener('click', () => {
+      const isOpen = header.classList.toggle('nav-open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+    });
 
-  // close menu when a link is clicked
-  links?.querySelectorAll('a').forEach(a =>
-    a.addEventListener('click', () => {
-      links.classList.remove('open');
-      toggle.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
-    })
-  );
+    header.querySelectorAll('.site-nav a').forEach((link) => {
+      link.addEventListener('click', () => {
+        header.classList.remove('nav-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!header.contains(e.target as Node)) {
+        header.classList.remove('nav-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
 </script>
