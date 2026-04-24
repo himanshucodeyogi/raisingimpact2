@@ -768,7 +768,8 @@ img {
 }
 
 .partner-table tr:last-child td { border-bottom: none; }
-.partner-table tr:nth-child(even) td { background: rgba(255,255,255,0.5); }
+.partner-table tbody tr:nth-child(odd) td { background: #ffffff; }
+.partner-table tbody tr:nth-child(even) td { background: #ddeaf7; }
 
 /* ── TEAM ── */
 .team {
