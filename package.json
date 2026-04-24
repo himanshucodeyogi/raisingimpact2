@@ -1,0 +1,16 @@
+{
+  "name": "raising-impact",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^4.16.0"
+  },
+  "overrides": {
+    "rollup": "npm:@rollup/wasm-node@latest"
+  }
+}

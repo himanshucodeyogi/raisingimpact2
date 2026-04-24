@@ -1,0 +1,172 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const team = [
+  {
+    name: 'Vikrant Bhargava',
+    img: 'https://raisingimpact.org/wp-content/uploads/2025/11/vikrant-120x120.jpg',
+    linkedin: 'https://uk.linkedin.com/in/vikrant-bhargava'
+  },
+  {
+    name: 'Luke Ding',
+    img: 'https://raisingimpact.org/wp-content/uploads/2025/11/luke-120x120.jpg',
+    linkedin: 'https://www.linkedin.com/in/lukeding2288/'
+  },
+  {
+    name: 'Rukmini Pandit',
+    img: 'https://raisingimpact.org/wp-content/uploads/2025/11/rukmini-120x120.jpg',
+    linkedin: 'https://sg.linkedin.com/in/rukmini-pandit-b0b82b81'
+  },
+  {
+    name: 'Tejaswini Vondivillu',
+    img: 'https://raisingimpact.org/wp-content/uploads/2025/11/tejaswini-120x120.jpg',
+    linkedin: 'https://in.linkedin.com/in/tejaswini-vondivillu-308152198'
+  },
+  {
+    name: 'Murugan Vasudevan',
+    img: 'https://raisingimpact.org/wp-content/uploads/2025/11/murugan-120x120.jpg',
+    linkedin: 'https://in.linkedin.com/in/muruganvasudevan'
+  },
+  {
+    name: 'Rathish Balakrishnan',
+    img: 'https://raisingimpact.org/wp-content/uploads/2025/11/ratish-120x120.jpg',
+    linkedin: 'https://in.linkedin.com/in/rathishbalakrishnan'
+  },
+  {
+    name: 'Arun NS',
+    img: 'https://raisingimpact.org/wp-content/uploads/2025/11/arun-ns-120x120.jpg',
+    linkedin: 'https://www.linkedin.com/in/arun-ns-62a7864/'
+  },
+  {
+    name: 'Pradnya Nikam',
+    img: 'https://raisingimpact.org/wp-content/uploads/2025/11/pradnya-120x120.jpg',
+    linkedin: 'https://in.linkedin.com/in/pradnya-nikam-104957173'
+  },
+  {
+    name: 'Ritika Ramasuri',
+    img: 'https://raisingimpact.org/wp-content/uploads/2025/11/ritika-120x120.jpg',
+    linkedin: 'https://in.linkedin.com/in/ritika-ramasuri'
+  }
+];
+---
+
+<Layout title="About Us — Raising Impact">
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="hero-tag">Raising Impact</div>
+    <h1>Guiding Philanthropy With Rigour</h1>
+    <div class="gold-bar"></div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="about-intro">
+    <p>Raising Impact acts as a strategic bridge between three pillars: intentional philanthropists, expert implementers, and the existing body of evidence. Rather than prescribing priorities, we meet the ecosystem where it is. We provide structured, context-sensitive advisory, grounded in rigorous research and sector expertise, to ensure philanthropic capital reaches its most effective destination. Our mission is simple: to maximize the impact of every dollar spent.</p>
+    <p>Raising Impact undertakes rigorous cause-area research, conducts state-level and sector-level analyses, engages subject-matter experts and on-ground organisations, and applies structured processes to evaluate the cost-effectiveness and scalability of interventions. Drawing on global models such as <a href="https://www.founderspledge.com/" target="_blank" rel="noopener noreferrer" class="inline-link">Founders Pledge</a> and <a href="https://www.givewell.org/" target="_blank" rel="noopener noreferrer" class="inline-link">GiveWell</a>, Raising Impact adapts these analytical frameworks to the Indian context, intending to expand across Asia.</p>
+  </section>
+
+  <!-- OUR JOURNEY -->
+  <section class="journey">
+    <div class="journey-inner">
+      <h2>Our Journey So Far</h2>
+      <div class="gold-bar-sm"></div>
+      <p>We began with a pilot research study in Early Childhood Care &amp; Education (ECCE). The team mapped sector needs, capital flows, effective interventions, and credible nonprofits across India. Findings included a 17x impact multiple for Anganwadi (child care centres) capacity-building and Maharashtra's (Indian state) paradox of high CSR funding but poor child well-being outcomes.</p>
+      <p>Building on this momentum, we initiated a strategic engagement with an independent philanthropist in August 2025 to enhance incomes of marginal and smallholder farmers. We focused on horticulture, high-value crops, and allied sectors as the most effective pathways, and, to address the lack of rigorous sector evidence, designed a targeted four-stage grant call to identify mid-sized NGOs with cost-effective interventions in high-priority states.</p>
+    </div>
+  </section>
+
+  <!-- HOW WE WORK -->
+  <section class="how-we-work">
+    <div class="section-header">
+      <div class="section-tag">Process</div>
+      <h2>How We Work</h2>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <h4>Cause Area Research</h4>
+        <p>State and sector analyses to target high-impact philanthropy.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <h4>Expert Engagement</h4>
+        <p>Experts and field partners validate research, implementation fidelity and feasibility.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <h4>Structured Evaluation</h4>
+        <p>Cost-effectiveness analysis using adapted <a href="https://www.givewell.org/" target="_blank" rel="noopener noreferrer" class="inline-link">GiveWell</a> and <a href="https://www.founderspledge.com/" target="_blank" rel="noopener noreferrer" class="inline-link">Founders Pledge</a> methods.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">04</div>
+        <h4>Capital Deployment</h4>
+        <p>Donors matched with vetted, deployment-ready organisations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY PARTNER -->
+  <section class="why-partner">
+    <div class="why-partner-inner">
+      <h2>Why Partner With Us?</h2>
+      <div class="gold-bar-sm"></div>
+      <table class="partner-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Philanthropic Benefit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Vetted Pipeline</td>
+            <td>Pre-screened, high-fidelity organizations ready for capital.</td>
+          </tr>
+          <tr>
+            <td>Shared Expertise</td>
+            <td>Benefit from the collective intelligence of Sattva Consulting and Veddis Foundation.</td>
+          </tr>
+          <tr>
+            <td>Measurable RoI</td>
+            <td>Confidence that your capital is linked to data-backed, scalable outcomes.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="team">
+    <div class="section-header">
+      <div class="section-tag">People</div>
+      <h2>Our Team</h2>
+    </div>
+    <div class="team-intro">
+      <p>The RIO team brings together decades of experience across Indian philanthropy, public policy, nonprofit operations, and sector research. We combine:</p>
+      <div class="team-traits">
+        <span class="trait-pill">Analytical depth</span>
+        <span class="trait-pill">On-ground understanding</span>
+        <span class="trait-pill">Strong regional insight</span>
+        <span class="trait-pill">Evidence-driven outcomes</span>
+      </div>
+      <p>Collaboration is at the heart of our work — whether with philanthropists, NGOs, state governments, or peer research organisations.</p>
+    </div>
+
+    <div class="section-header" style="margin-bottom: 36px;">
+      <div class="section-tag">Founding Team</div>
+    </div>
+
+    <div class="team-grid">
+      {team.map((member) => (
+        <div class="team-card">
+          <div class="team-avatar">
+            <img src={member.img} alt={member.name} />
+          </div>
+          <h4>{member.name}</h4>
+          <a href={member.linkedin} target="_blank" rel="noopener noreferrer" class="team-linkedin">LinkedIn</a>
+        </div>
+      ))}
+    </div>
+  </section>
+
+</Layout>
