@@ -611,6 +611,11 @@ img {
   margin-bottom: 0;
 }
 
+.journey-lead {
+  color: var(--gold);
+  font-weight: 600;
+}
+
 .journey-item {
   position: relative;
   padding-left: 28px;
