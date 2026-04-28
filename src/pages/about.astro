@@ -4,46 +4,55 @@ import Layout from '../layouts/Layout.astro';
 const team = [
   {
     name: 'Vikrant Bhargava',
+    role: 'Steering Committee',
     img: 'https://raisingimpact.org/wp-content/uploads/2025/11/vikrant-120x120.jpg',
     linkedin: 'https://uk.linkedin.com/in/vikrant-bhargava'
   },
   {
     name: 'Luke Ding',
+    role: 'Steering Committee',
     img: 'https://raisingimpact.org/wp-content/uploads/2025/11/luke-120x120.jpg',
     linkedin: 'https://www.linkedin.com/in/lukeding2288/'
   },
   {
-    name: 'Rukmini Pandit',
-    img: 'https://raisingimpact.org/wp-content/uploads/2025/11/rukmini-120x120.jpg',
-    linkedin: 'https://sg.linkedin.com/in/rukmini-pandit-b0b82b81'
-  },
-  {
-    name: 'Tejaswini Vondivillu',
-    img: 'https://raisingimpact.org/wp-content/uploads/2025/11/tejaswini-120x120.jpg',
-    linkedin: 'https://in.linkedin.com/in/tejaswini-vondivillu-308152198'
-  },
-  {
     name: 'Murugan Vasudevan',
+    role: 'Steering Committee',
     img: 'https://raisingimpact.org/wp-content/uploads/2025/11/murugan-120x120.jpg',
     linkedin: 'https://in.linkedin.com/in/muruganvasudevan'
   },
   {
     name: 'Rathish Balakrishnan',
+    role: 'Steering Committee',
     img: 'https://raisingimpact.org/wp-content/uploads/2025/11/ratish-120x120.jpg',
     linkedin: 'https://in.linkedin.com/in/rathishbalakrishnan'
   },
   {
+    name: 'Rukmini Pandit',
+    role: 'Strategy, Programme Management & Partnerships',
+    img: 'https://raisingimpact.org/wp-content/uploads/2025/11/rukmini-120x120.jpg',
+    linkedin: 'https://sg.linkedin.com/in/rukmini-pandit-b0b82b81'
+  },
+  {
     name: 'Arun NS',
+    role: 'Research Lead',
     img: 'https://raisingimpact.org/wp-content/uploads/2025/11/arun-ns-120x120.jpg',
     linkedin: 'https://www.linkedin.com/in/arun-ns-62a7864/'
   },
   {
+    name: 'Tejaswini Vondivillu',
+    role: 'Researcher',
+    img: 'https://raisingimpact.org/wp-content/uploads/2025/11/tejaswini-120x120.jpg',
+    linkedin: 'https://in.linkedin.com/in/tejaswini-vondivillu-308152198'
+  },
+  {
     name: 'Pradnya Nikam',
+    role: 'Researcher',
     img: 'https://raisingimpact.org/wp-content/uploads/2025/11/pradnya-120x120.jpg',
     linkedin: 'https://in.linkedin.com/in/pradnya-nikam-104957173'
   },
   {
     name: 'Ritika Ramasuri',
+    role: 'Researcher',
     img: 'https://raisingimpact.org/wp-content/uploads/2025/11/ritika-120x120.jpg',
     linkedin: 'https://in.linkedin.com/in/ritika-ramasuri'
   }
@@ -71,11 +80,15 @@ const team = [
       <div class="gold-bar-sm"></div>
 
       <div class="journey-item">
-        <p>We began with a pilot research study in Early Childhood Care &amp; Education (ECCE). The team mapped sector needs, capital flows, effective interventions, and credible nonprofits across India. Findings included a <span class="stat-pill">17×</span> impact multiple for Anganwadi (child care centres) capacity-building and Maharashtra's (Indian state) paradox of high CSR funding but poor child well-being outcomes.</p>
+        <p>We began with a pilot research study in Early Childhood Care &amp; Education (ECCE). The team mapped sector needs, capital flows, effective interventions, and credible nonprofits across India. We found Maharashtra's (Indian state) paradox of being the richest state but underperforming on several key child-development indicators and yet the philanthropic contributions for ECCE interventions is only USD 6.1 million. Additionally, through our cost-effectiveness analyses, we found that adding an extra, part-time Anganwadi Worker to focus on play-based early learning activities has a 18× impact compared to the 12× for merely supporting with infrastructure for Anganwadi Centres.</p>
       </div>
 
       <div class="journey-item">
-        <p>Building on this momentum, we initiated a strategic engagement with an independent philanthropist in <span class="date-badge">August 2025</span> to enhance incomes of marginal and smallholder farmers. We focused on horticulture, high-value crops, and allied sectors as the most effective pathways, and, to address the lack of rigorous sector evidence, designed a targeted four-stage grant call to identify mid-sized NGOs with cost-effective interventions in high-priority states.</p>
+        <p>Building on this momentum, we initiated a strategic engagement with an independent philanthropist in August 2025 to enhance incomes of marginal and smallholder farmers. We focused on horticulture, high-value crops, and allied sectors as the most effective pathways, and, to address the lack of rigorous sector evidence, designed a targeted four-stage grant call to identify mid-sized NGOs with cost-effective interventions in high-priority states.</p>
+      </div>
+
+      <div class="journey-item">
+        <p>We are currently in the early stages of exploring the cause area of women's empowerment with another independent philanthropist. This engagement will strategically establish a definition and framework for women's empowerment, identify areas of need and areas where philanthropic funding can have maximum impact.</p>
       </div>
     </div>
   </section>
@@ -113,13 +126,13 @@ const team = [
   <!-- WHY PARTNER -->
   <section class="why-partner">
     <div class="why-partner-inner">
-      <h2>Why Partner With Us?</h2>
+      <h2>Why Partner With Us</h2>
       <div class="gold-bar-sm"></div>
       <table class="partner-table">
         <thead>
           <tr>
             <th>Feature</th>
-            <th>Philanthropic Benefit</th>
+            <th>Benefit</th>
           </tr>
         </thead>
         <tbody>
@@ -134,6 +147,10 @@ const team = [
           <tr>
             <td>Measurable RoI</td>
             <td>Confidence that your capital is linked to data-backed, scalable outcomes.</td>
+          </tr>
+          <tr>
+            <td>Deep Partnership</td>
+            <td>A trusted extension of your personal philanthropic vision.</td>
           </tr>
         </tbody>
       </table>
@@ -150,7 +167,7 @@ const team = [
       <p>The RIO team brings together decades of experience across Indian philanthropy, public policy, nonprofit operations, and sector research. We combine:</p>
       <div class="team-traits">
         <span class="trait-pill">Analytical depth</span>
-        <span class="trait-pill">On-ground understanding</span>
+        <span class="trait-pill">Ecosystem network</span>
         <span class="trait-pill">Strong regional insight</span>
         <span class="trait-pill">Evidence-driven outcomes</span>
       </div>
@@ -169,6 +186,7 @@ const team = [
           </div>
           <div class="team-card-info">
             <h4 class="team-name">{member.name}</h4>
+            <p class="team-role">{member.role}</p>
             <a href={member.linkedin} target="_blank" rel="noopener noreferrer" class="team-linkedin">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M19 0H5C2.239 0 0 2.239 0 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5V5c0-2.761-2.238-5-5-5zM8 19H5V8h3v11zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zM20 19h-3v-5.604c0-3.368-4-3.113-4 0V19h-3V8h3v1.765c1.396-2.586 7-2.777 7 2.476V19z"/>

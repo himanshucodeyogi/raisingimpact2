@@ -861,6 +861,15 @@ img {
   font-size: 0.9rem;
   font-weight: 700;
   color: var(--navy-dark);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.team-role {
+  font-size: 0.72rem;
+  color: var(--gold);
+  font-weight: 600;
+  letter-spacing: 0.03em;
   margin-bottom: 8px;
   line-height: 1.3;
 }
