@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Research — Raising Impact">
+
+  <section class="research-section">
+    <p class="research-coming-soon">
+      Our research on <strong>ECCE</strong> &amp; <strong>Smallholder Farmers' Incomes</strong> will be published soon.
+    </p>
+  </section>
+
+</Layout>
+
+<style>
+  .research-section {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 2rem;
+    background: #F7F8FA;
+  }
+
+  .research-coming-soon {
+    max-width: 620px;
+    text-align: center;
+    font-size: clamp(1.05rem, 2.5vw, 1.3rem);
+    color: var(--navy-dark);
+    line-height: 1.9;
+  }
+
+  .research-coming-soon strong {
+    color: var(--gold-warm);
+    font-weight: 600;
+  }
+</style>

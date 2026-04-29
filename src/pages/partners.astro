@@ -1,0 +1,121 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const partners = [
+  { name: 'Sattva Consulting',  logo: '/sattva-logo.png',          blendDark: true  },
+  { name: 'Veddis Foundation',  logo: '/veddis-logo.png',          blendDark: false },
+  { name: 'Founders Pledge',    logo: '/founders-pledge-logo.png', blendDark: false },
+];
+---
+
+<Layout title="Partners — Raising Impact">
+
+  <section class="partners-logos">
+    <div class="logos-header">
+      <h2>Trusted Partners</h2>
+      <div class="gold-bar-sm"></div>
+    </div>
+    <div class="partners-grid">
+      {partners.map((p) => (
+        <div class="partner-card">
+          <div class="partner-logo-wrap">
+            <img
+              src={p.logo}
+              alt={`${p.name} logo`}
+              class={`partner-logo-img${p.blendDark ? ' blend-dark' : ''}`}
+            />
+          </div>
+          <p class="partner-name">{p.name}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* ── LOGOS SECTION ── */
+  .partners-logos {
+    padding: 70px 2rem 80px;
+    background: #F7F8FA;
+  }
+
+  .logos-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .logos-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: var(--navy-dark);
+    margin-bottom: 0.75rem;
+  }
+
+  .logos-header .gold-bar-sm {
+    margin: 0 auto;
+  }
+
+  .partners-grid {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .partner-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 260px;
+  }
+
+  .partner-logo-wrap {
+    width: 240px;
+    height: 130px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 24px;
+    background: #fff;
+    border: 1px solid #e4e7ec;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+    transition: box-shadow 0.25s, transform 0.25s;
+    overflow: hidden;
+  }
+
+  .partner-card:hover .partner-logo-wrap {
+    box-shadow: 0 10px 28px rgba(15, 36, 64, 0.14);
+    transform: translateY(-4px);
+  }
+
+  .partner-logo-img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .partner-logo-img.blend-dark {
+    mix-blend-mode: multiply;
+  }
+
+  .partner-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--navy-dark);
+    text-align: center;
+    letter-spacing: 0.02em;
+  }
+
+  @media (max-width: 600px) {
+    .partner-card { width: 100%; max-width: 280px; }
+    .partner-logo-wrap { width: 100%; }
+  }
+</style>

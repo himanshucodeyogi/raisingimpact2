@@ -585,15 +585,30 @@ img {
 }
 
 .journey-inner {
-  max-width: 860px;
+  max-width: 1040px;
   margin: 0 auto;
 }
 
-.journey h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.9rem;
+.journey-main-title {
+  font-family: 'Georgia', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
   color: var(--navy-dark);
-  margin-bottom: 8px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.journey-main-title em {
+  font-style: italic;
+  color: var(--gold-sand);
+}
+
+.journey-intro {
+  font-size: 0.92rem;
+  color: var(--slate);
+  max-width: 540px;
+  line-height: 1.8;
+  margin-bottom: 48px;
 }
 
 .gold-bar-sm {
@@ -604,49 +619,166 @@ img {
   margin: 16px 0 32px;
 }
 
-.journey p {
-  font-size: 1rem;
-  color: var(--slate);
-  line-height: 1.85;
-  margin-bottom: 0;
+/* Cards */
+.journey-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
-.journey-lead {
+.journey-card {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 28px rgba(15,36,64,0.10);
+}
+
+.journey-card-left {
+  background: var(--white);
+  padding: 36px 40px 30px;
+  border-top: 3px solid var(--gold);
+}
+
+.journey-card-right {
+  background: var(--navy-dark);
+  padding: 30px 26px 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Number + tag row */
+.journey-num-row {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.journey-num {
+  font-family: 'Georgia', serif;
+  font-size: 2.2rem;
   color: var(--gold);
-  font-weight: 600;
+  font-style: italic;
+  line-height: 1;
+  flex-shrink: 0;
 }
 
-.journey-item {
-  position: relative;
-  padding-left: 28px;
-  margin-bottom: 36px;
+.journey-tag {
+  font-family: 'Courier New', monospace;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-sand);
 }
 
-.journey-item:last-child { margin-bottom: 0; }
-
-.journey-item::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 9px;
-  width: 11px;
-  height: 11px;
-  background: var(--gold);
-  border-radius: 50%;
-  box-shadow: 0 0 0 3px rgba(192,157,75,0.22);
+/* Card title */
+.journey-card-title {
+  font-family: 'Georgia', serif;
+  font-size: clamp(1.35rem, 2.2vw, 1.65rem);
+  color: var(--navy-dark);
+  line-height: 1.25;
+  margin-bottom: 14px;
+  font-weight: 400;
 }
 
-.journey-item::after {
-  content: '';
-  position: absolute;
-  left: 5px;
-  top: 22px;
-  width: 2px;
-  height: calc(100% + 14px);
-  background: rgba(192,157,75,0.25);
+.journey-card-title em {
+  font-style: italic;
+  color: var(--gold-sand);
 }
 
-.journey-item:last-child::after { display: none; }
+.journey-card-body {
+  font-size: 0.87rem;
+  color: var(--slate);
+  line-height: 1.8;
+  margin-bottom: 22px;
+}
+
+/* Stat pills row */
+.journey-stats {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--soft-bg);
+  padding-top: 16px;
+}
+
+.journey-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.journey-stat-value {
+  font-family: 'Georgia', serif;
+  font-size: 1.15rem;
+  color: var(--navy-dark);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.journey-stat-label {
+  font-family: 'Courier New', monospace;
+  font-size: 0.56rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--slate);
+}
+
+/* Outcome (right dark box) */
+.outcome-label {
+  font-family: 'Courier New', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-sand);
+  margin-bottom: 18px;
+}
+
+.outcome-stat {
+  font-family: 'Georgia', serif;
+  font-size: 3.8rem;
+  color: var(--gold);
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 14px;
+}
+
+.outcome-x {
+  font-size: 2.4rem;
+  color: var(--gold);
+  vertical-align: middle;
+}
+
+.outcome-stat-text {
+  font-family: 'Georgia', serif;
+  font-size: 2.4rem;
+  font-style: italic;
+  color: var(--gold-sand);
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+
+.outcome-desc-title {
+  font-family: 'Courier New', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-sand);
+  margin-bottom: 8px;
+}
+
+.outcome-desc {
+  font-size: 0.76rem;
+  color: rgba(232, 224, 208, 0.65);
+  line-height: 1.65;
+  margin-top: auto;
+}
+
+/* Legacy – keep for compatibility */
+.journey-lead { color: var(--gold); font-weight: 600; }
+.text-highlight { font-family: 'Georgia', serif; font-style: italic; color: var(--gold-sand); }
 
 .stat-pill {
   display: inline-block;
@@ -1080,6 +1212,22 @@ img {
 
 /* ── TABLET (900px) ── */
 @media (max-width: 900px) {
+  /* Journey cards: stack, right box goes horizontal */
+  .journey-card { grid-template-columns: 1fr; }
+  .journey-card-right {
+    padding: 22px 26px;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .outcome-label { margin-bottom: 0; min-width: 100%; }
+  .outcome-stat { margin-bottom: 0; font-size: 2.6rem; }
+  .outcome-stat-text { margin-bottom: 0; font-size: 2rem; }
+  .outcome-x { font-size: 1.7rem; }
+  .outcome-desc-title { margin-bottom: 0; }
+  .outcome-desc { margin-top: 0; }
+
   .page-hero, .about-intro, .journey,
   .how-we-work, .why-partner, .team { padding-left: 28px; padding-right: 28px; }
 
@@ -1177,6 +1325,24 @@ img {
 
   .page-hero { padding: 48px 20px 40px; }
 
+  /* Journey cards at 768px */
+  .journey { padding: 48px 20px; }
+  .journey-main-title { font-size: 1.9rem; }
+  .journey-intro { margin-bottom: 32px; }
+  .journey-card-left { padding: 28px 24px 24px; }
+  .journey-num { font-size: 1.8rem; }
+  .journey-card-title { font-size: 1.3rem; }
+  .journey-card-right {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 22px 24px;
+  }
+  .outcome-label { min-width: unset; }
+  .outcome-stat { font-size: 2.4rem; margin-bottom: 4px; }
+  .outcome-stat-text { font-size: 1.8rem; margin-bottom: 4px; }
+  .outcome-x { font-size: 1.5rem; }
+
   .site-footer { padding: 2rem 1rem 1.2rem; }
   .footer-brand span { font-size: 1.05rem; }
 }
@@ -1185,10 +1351,25 @@ img {
 @media (max-width: 600px) {
   .page-hero { padding: 48px 16px 40px; }
   .about-intro { padding: 48px 16px; }
-  .journey { padding: 48px 16px; }
+  .journey { padding: 40px 16px; }
   .how-we-work { padding: 48px 16px; }
   .why-partner { padding: 48px 16px; }
   .team { padding: 48px 16px; }
+
+  /* Journey cards at 600px */
+  .journey-cards { gap: 18px; }
+  .journey-card-left { padding: 24px 18px 20px; }
+  .journey-card-right { padding: 18px 18px 20px; }
+  .journey-main-title { font-size: 1.65rem; }
+  .journey-intro { font-size: 0.85rem; margin-bottom: 26px; }
+  .journey-num { font-size: 1.6rem; }
+  .journey-tag { font-size: 0.55rem; }
+  .journey-card-title { font-size: 1.15rem; }
+  .journey-card-body { font-size: 0.83rem; }
+  .journey-stats { gap: 16px; }
+  .journey-stat-value { font-size: 1rem; }
+  .outcome-stat { font-size: 2rem; }
+  .outcome-stat-text { font-size: 1.55rem; }
 
   .steps-grid { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: 1fr; gap: 12px; }
@@ -1221,6 +1402,18 @@ img {
   .contact-form .form-row { grid-template-columns: 1fr; gap: 0; }
 
   .back-to-top { padding: 0.5rem 1.2rem; font-size: 0.9rem; }
+
+  /* Journey cards at 480px */
+  .journey { padding: 36px 14px; }
+  .journey-main-title { font-size: 1.45rem; }
+  .journey-num-row { gap: 10px; }
+  .journey-num { font-size: 1.45rem; }
+  .journey-card-title { font-size: 1.05rem; }
+  .journey-card-left { padding: 20px 16px 18px; }
+  .journey-card-right { padding: 16px 16px 18px; }
+  .outcome-stat { font-size: 1.8rem; }
+  .outcome-stat-text { font-size: 1.4rem; }
+  .outcome-x { font-size: 1.2rem; }
 }
 
 /* ── VERY SMALL PHONE (360px) ── */

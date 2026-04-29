@@ -1,8 +1,10 @@
 ---
 const pathname = Astro.url.pathname;
-const isHome    = pathname === '/';
-const isAbout   = pathname === '/about' || pathname === '/about/';
-const isContact = pathname === '/contact' || pathname === '/contact/';
+const isHome     = pathname === '/';
+const isAbout    = pathname === '/about'    || pathname === '/about/';
+const isResearch = pathname === '/research' || pathname === '/research/';
+const isPartners = pathname === '/partners' || pathname === '/partners/';
+const isContact  = pathname === '/contact'  || pathname === '/contact/';
 ---
 
 <header class="site-header">
@@ -25,9 +27,11 @@ const isContact = pathname === '/contact' || pathname === '/contact/';
 
     <nav class="site-nav" id="site-nav">
       <ul>
-        <li><a href="/"        class={isHome    ? 'active' : ''}>Home</a></li>
-        <li><a href="/about"   class={isAbout   ? 'active' : ''}>About Us</a></li>
-        <li><a href="/contact" class={isContact ? 'active' : ''}>Contact Us</a></li>
+        <li><a href="/"          class={isHome     ? 'active' : ''}>Home</a></li>
+        <li><a href="/about"     class={isAbout    ? 'active' : ''}>About Us</a></li>
+        <li><a href="/research"  class={isResearch ? 'active' : ''}>Research</a></li>
+        <li><a href="/partners"  class={isPartners ? 'active' : ''}>Partners</a></li>
+        <li><a href="/contact"   class={isContact  ? 'active' : ''}>Contact Us</a></li>
       </ul>
     </nav>
   </div>
