@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const team = [
+const steering = [
   {
     name: 'Vikrant Bhargava',
     role: 'Steering Committee',
@@ -26,6 +26,9 @@ const team = [
     img: 'https://raisingimpact.org/wp-content/uploads/2025/11/ratish-120x120.jpg',
     linkedin: 'https://in.linkedin.com/in/rathishbalakrishnan'
   },
+];
+
+const coreTeam = [
   {
     name: 'Rukmini Pandit',
     role: 'Strategy, Programme Management & Partnerships',
@@ -88,8 +91,8 @@ const team = [
               <span class="journey-num">01</span>
               <span class="journey-tag">ECCE Pilot · Maharashtra</span>
             </div>
-            <h3 class="journey-card-title">The richest state. The <em>thinnest</em> evidence.</h3>
-            <p class="journey-card-body">Our pilot in Early Childhood Care &amp; Education exposed Maharashtra's paradox: India's wealthiest state, yet failing on key child-development indicators — and crowded out by a tiny philanthropic pool.</p>
+            <h3 class="journey-card-title">The Richest State, <em>Poor Child Wellbeing.</em></h3>
+            <p class="journey-card-body">Our pilot in Early Childhood Care &amp; Education exposed Maharashtra's paradox: India's wealthiest state, yet failing on key child-development indicators, and has significantly low philanthropic pool.</p>
             <div class="journey-stats">
               <div class="journey-stat">
                 <span class="journey-stat-value">$6.1M</span>
@@ -249,12 +252,13 @@ const team = [
       <p>Collaboration is at the heart of our work — whether with philanthropists, NGOs, state governments, or peer research organisations.</p>
     </div>
 
-    <div class="section-header" style="margin-bottom: 36px;">
-      <div class="section-tag">Founding Team</div>
+    <div class="founding-subheader">
+      <span class="section-tag">Founding Team</span>
+      <div class="founding-divider"></div>
     </div>
 
     <div class="team-grid">
-      {team.map((member) => (
+      {[...steering, ...coreTeam].map((member) => (
         <div class="team-card">
           <div class="team-avatar-wrap">
             <img src={member.img} alt={member.name} class="team-avatar-img" />

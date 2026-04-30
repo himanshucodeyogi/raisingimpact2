@@ -818,6 +818,7 @@ img {
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
   max-width: 1100px;
+  margin: 0 auto;
 }
 
 .step-card {
@@ -967,7 +968,7 @@ img {
 }
 
 .team-card:hover {
-  box-shadow: 0 10px 28px rgba(15,36,64,0.13);
+  box-shadow: 0 12px 32px rgba(15,36,64,0.15), 0 0 0 1px rgba(196,160,64,0.25);
   transform: translateY(-3px);
 }
 
@@ -1028,6 +1029,30 @@ img {
   color: var(--gold);
   border-bottom: none;
 }
+
+/* ── FOUNDING TEAM ── */
+.founding-subheader {
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.founding-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
+  color: var(--navy-dark);
+  font-weight: 700;
+  margin-top: 8px;
+  margin-bottom: 14px;
+}
+
+.founding-divider {
+  width: 48px;
+  height: 3px;
+  background: var(--gold);
+  border-radius: 2px;
+  margin: 0 auto;
+}
+
 
 /* ── CONTACT SECTION ── */
 .contact-section {
