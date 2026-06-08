@@ -14,6 +14,8 @@ const {
   image = '/logo.png',
 } = Astro.props;
 
+const imageType = image.endsWith('.jpg') || image.endsWith('.jpeg') ? 'image/jpeg' : 'image/png';
+
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
@@ -36,9 +38,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <meta property="og:description" content={description} />
   <meta property="og:image" content={new URL(image, Astro.site)} />
   <meta property="og:image:secure_url" content={new URL(image, Astro.site)} />
-  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:type" content={imageType} />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Raising Impact — Guiding Philanthropy With Rigour" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
