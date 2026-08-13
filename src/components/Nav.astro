@@ -1,10 +1,13 @@
 ---
 const pathname = Astro.url.pathname;
-const isHome     = pathname === '/';
-const isAbout    = pathname === '/about'    || pathname === '/about/';
-const isResearch = pathname === '/research' || pathname === '/research/';
-const isPartners = pathname === '/partners' || pathname === '/partners/';
-const isContact  = pathname === '/contact'  || pathname === '/contact/';
+const isHome      = pathname === '/';
+const isAbout     = pathname === '/about'    || pathname === '/about/';
+const isResearch  = pathname === '/research' || pathname === '/research/';
+const isBlogs     = pathname === '/blogs'    || pathname.startsWith('/blogs/');
+const isResources = pathname === '/resources' || pathname === '/resources/' || isResearch || isBlogs;
+const isCareers   = pathname === '/careers'  || pathname === '/careers/';
+const isPartners  = pathname === '/partners' || pathname === '/partners/';
+const isContact   = pathname === '/contact'  || pathname === '/contact/';
 ---
 
 <header class="site-header">
@@ -29,7 +32,21 @@ const isContact  = pathname === '/contact'  || pathname === '/contact/';
       <ul>
         <li><a href="/"          class={isHome     ? 'active' : ''}>Home</a></li>
         <li><a href="/about"     class={isAbout    ? 'active' : ''}>About Us</a></li>
-        <li><a href="/research"  class={isResearch ? 'active' : ''}>Research</a></li>
+
+        <li class="has-dropdown">
+          <a href="/resources" class={isResources ? 'active' : ''} aria-haspopup="true">
+            Resources
+            <svg class="dropdown-caret" viewBox="0 0 12 8" aria-hidden="true" focusable="false">
+              <path d="M1 1.5 6 6.5l5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="/research" class={isResearch ? 'active' : ''}>Research</a></li>
+            <li><a href="/blogs"    class={isBlogs    ? 'active' : ''}>Blogs</a></li>
+          </ul>
+        </li>
+
+        <li><a href="/careers"   class={isCareers  ? 'active' : ''}>Careers</a></li>
         <li><a href="/partners"  class={isPartners ? 'active' : ''}>Partners</a></li>
         <li><a href="/contact"   class={isContact  ? 'active' : ''}>Contact Us</a></li>
       </ul>

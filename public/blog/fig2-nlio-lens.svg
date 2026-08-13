@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 418" width="1200" height="418" role="img" aria-labelledby="fig2Title">
+  <title id="fig2Title">The NLIO lens: Need and Leverage are answered from data alone; Interventions and Operators are answered by leaving the desk.</title>
+
+  <rect x="0.75" y="0.75" width="1198.5" height="416.5" rx="14" fill="#FFFFFF" stroke="#E4E7EC" stroke-width="1.5" />
+
+  <text x="60" y="64" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="17" font-weight="700"
+        letter-spacing="3" fill="#C4973F">THE NLIO LENS</text>
+
+  <!-- group labels -->
+  <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" letter-spacing="2.2" fill="#7A92AA">
+    <text x="60" y="90">ANSWERED FROM DATA ALONE</text>
+    <line x1="60" y1="102" x2="588" y2="102" stroke="#E4E7EC" stroke-width="1.5" />
+    <text x="610" y="90">ANSWERED BY LEAVING THE DESK</text>
+    <line x1="610" y1="102" x2="1138" y2="102" stroke="#E4E7EC" stroke-width="1.5" />
+  </g>
+
+  <!-- cards -->
+  <g>
+    <rect x="60" y="124" width="253" height="254" rx="12" fill="#FFFFFF" stroke="#DDE3EA" stroke-width="1.5" />
+    <circle cx="102" cy="174" r="26" fill="#C09D4B" />
+    <text x="102" y="183" font-family="Georgia, 'Times New Roman', serif" font-size="24" fill="#0F2440" text-anchor="middle">N</text>
+    <text x="86" y="250" font-family="Georgia, 'Times New Roman', serif" font-size="23" fill="#0F2440">Need</text>
+    <rect x="86" y="268" width="36" height="3" rx="1.5" fill="#C09D4B" />
+    <text x="86" y="310" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16.5" fill="#44546A">
+      <tspan x="86" dy="0">Where is the problem</tspan>
+      <tspan x="86" dy="26">most acute?</tspan>
+    </text>
+
+    <rect x="335" y="124" width="253" height="254" rx="12" fill="#FFFFFF" stroke="#DDE3EA" stroke-width="1.5" />
+    <circle cx="377" cy="174" r="26" fill="#C09D4B" />
+    <text x="377" y="183" font-family="Georgia, 'Times New Roman', serif" font-size="24" fill="#0F2440" text-anchor="middle">L</text>
+    <text x="361" y="250" font-family="Georgia, 'Times New Roman', serif" font-size="23" fill="#0F2440">Leverage</text>
+    <rect x="361" y="268" width="36" height="3" rx="1.5" fill="#C09D4B" />
+    <text x="361" y="310" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16.5" fill="#44546A">
+      <tspan x="361" dy="0">Where can philanthropy</tspan>
+      <tspan x="361" dy="26">add value that the</tspan>
+      <tspan x="361" dy="26">state cannot?</tspan>
+    </text>
+
+    <rect x="610" y="124" width="253" height="254" rx="12" fill="#FFFFFF" stroke="#DDE3EA" stroke-width="1.5" />
+    <circle cx="652" cy="174" r="26" fill="#1E3A5A" />
+    <text x="652" y="183" font-family="Georgia, 'Times New Roman', serif" font-size="24" fill="#FFFFFF" text-anchor="middle">I</text>
+    <text x="636" y="250" font-family="Georgia, 'Times New Roman', serif" font-size="23" fill="#0F2440">Interventions</text>
+    <rect x="636" y="268" width="36" height="3" rx="1.5" fill="#C09D4B" />
+    <text x="636" y="310" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16.5" fill="#44546A">
+      <tspan x="636" dy="0">Which interventions</tspan>
+      <tspan x="636" dy="26">actually succeed?</tspan>
+    </text>
+
+    <rect x="885" y="124" width="253" height="254" rx="12" fill="#FFFFFF" stroke="#DDE3EA" stroke-width="1.5" />
+    <circle cx="927" cy="174" r="26" fill="#1E3A5A" />
+    <text x="927" y="183" font-family="Georgia, 'Times New Roman', serif" font-size="24" fill="#FFFFFF" text-anchor="middle">O</text>
+    <text x="911" y="250" font-family="Georgia, 'Times New Roman', serif" font-size="23" fill="#0F2440">Operators</text>
+    <rect x="911" y="268" width="36" height="3" rx="1.5" fill="#C09D4B" />
+    <text x="911" y="310" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16.5" fill="#44546A">
+      <tspan x="911" dy="0">Who can be trusted</tspan>
+      <tspan x="911" dy="26">to deliver them at</tspan>
+      <tspan x="911" dy="26">quality?</tspan>
+    </text>
+  </g>
+</svg>

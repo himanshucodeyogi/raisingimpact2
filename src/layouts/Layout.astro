@@ -1,6 +1,10 @@
 ---
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+// bundled (not linked from /public) so the filename carries a content hash —
+// browsers then pick up CSS changes immediately instead of serving a stale
+// cached copy for the host's 7-day max-age
+import '../styles/global.css';
 
 interface Props {
   title: string;
@@ -64,7 +68,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     }
   })} />
 
-  <link rel="stylesheet" href="/styles/global.css" />
 </head>
 <body>
   <Nav />

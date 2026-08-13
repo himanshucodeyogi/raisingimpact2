@@ -1,0 +1,196 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+// `author` and `date` render the byline under the title — leave them off and the
+// byline is skipped entirely.
+const posts = [
+  {
+    href: '/blogs/how-we-pick-what-to-fund',
+    title: 'How we pick what to fund, and what we hold back on until the evidence is in',
+    standfirst:
+      'Everyone agrees philanthropy should fund “what works.” The harder question is how you know what works. Here is our process, from cause selection to cost-effectiveness, including where we got stuck.',
+    thumb: '/blog/how-we-pick-what-to-fund-thumb.svg',
+    author: '',
+    date: '',
+  },
+  {
+    href: '/blogs/why-evidence-led-giving-has-no-home-in-india',
+    title: 'Why evidence-led giving has no home in India (yet)',
+    standfirst:
+      'A generation of analytical donors is reshaping Indian giving. The evidence-led guidance they’re looking for hasn’t caught up. That’s why we started Raising Impact.',
+    thumb: '/blog/why-evidence-led-giving-thumb.svg',
+    author: '',
+    date: '',
+  },
+];
+---
+
+<Layout
+  title="Blogs — Raising Impact"
+  description="Writing from Raising Impact on evidence-led philanthropy in India — how we choose cause areas, weigh evidence, and help donors give well."
+>
+
+  <section class="blogs-section">
+    <div class="blogs-container">
+
+      <div class="blogs-header">
+        <h1>Blogs</h1>
+        <div class="gold-bar-sm"></div>
+        <p>How we think about evidence-led giving in India, written in the open.</p>
+      </div>
+
+      <div class="blogs-grid">
+        {posts.map((post) => (
+          <a class="blog-card" href={post.href}>
+            <div class="blog-thumb">
+              <img src={post.thumb} alt={post.standfirst} loading="lazy" />
+            </div>
+            <div class="blog-body">
+              <h2 class="blog-heading">{post.title}</h2>
+              {(post.author || post.date) && (
+                <p class="blog-meta">
+                  {post.author && <>by {post.author}</>}
+                  {post.author && post.date && <> on </>}
+                  {post.date}
+                </p>
+              )}
+              <span class="blog-more">Read More<span aria-hidden="true"> &#8594;</span></span>
+            </div>
+          </a>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .blogs-section {
+    padding: 24px 2rem 80px;
+    background: #F7F8FA;
+    min-height: 60vh;
+  }
+
+  .blogs-container {
+    max-width: 1060px;
+    margin: 0 auto;
+  }
+
+  .blogs-header {
+    text-align: center;
+    margin-bottom: 2.75rem;
+  }
+
+  .blogs-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    color: var(--navy-dark);
+    margin-bottom: 0.75rem;
+  }
+
+  .blogs-header .gold-bar-sm {
+    margin: 0 auto;
+  }
+
+  .blogs-header p {
+    margin-top: 0.9rem;
+    color: var(--slate);
+    font-size: 1.02rem;
+    line-height: 1.9;
+  }
+
+  /* auto-fill, not auto-fit: empty tracks stay reserved, so a single post keeps
+     its column width instead of stretching across the container */
+  .blogs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 2rem;
+    align-items: start;
+  }
+
+  /* flat card: the image is the frame, no border or panel behind the text */
+  .blog-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.25s;
+  }
+
+  .blog-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .blog-thumb {
+    border-radius: 10px;
+    overflow: hidden;
+    /* matches the thumbnail's own gradient, so any letterboxing is invisible */
+    background: linear-gradient(135deg, #0F2440 0%, #16304F 55%, #203C55 100%);
+  }
+
+  .blog-thumb img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1200 / 630;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .blog-card:hover .blog-thumb img {
+    transform: scale(1.04);
+  }
+
+  .blog-body {
+    padding: 0.95rem 0.25rem 0;
+  }
+
+  .blog-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.06rem;
+    line-height: 1.35;
+    color: var(--navy-dark);
+    margin: 0;
+    transition: color 0.2s;
+  }
+
+  .blog-card:hover .blog-heading {
+    color: var(--gold-warm);
+  }
+
+  .blog-meta {
+    margin: 0.4rem 0 0;
+    font-size: 0.86rem;
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--blue-grey);
+  }
+
+  .blog-more {
+    display: inline-block;
+    margin-top: 0.7rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--gold-warm);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+
+  .blog-card:hover .blog-more {
+    border-bottom-color: var(--gold-warm);
+  }
+
+  @media (max-width: 600px) {
+    .blogs-section {
+      padding: 22px 1.25rem 70px;
+    }
+
+    .blogs-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .blog-heading {
+      font-size: 1.08rem;
+    }
+  }
+</style>

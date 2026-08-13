@@ -1,0 +1,131 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const resources = [
+  {
+    href: '/research',
+    title: 'Research',
+    blurb: 'Our cause-area research and cost-effectiveness analysis, starting with ECCE and Smallholder Farmers’ Incomes.',
+  },
+  {
+    href: '/blogs',
+    title: 'Blogs',
+    blurb: 'How we think about evidence-led giving in India, and how we work — written in the open.',
+  },
+];
+---
+
+<Layout
+  title="Resources — Raising Impact"
+  description="Research and writing from Raising Impact on evidence-led philanthropy in India — cause-area research, cost-effectiveness analysis, and our blog."
+>
+
+  <section class="resources-section">
+    <div class="resources-container">
+
+      <div class="resources-header">
+        <h1>Resources</h1>
+        <div class="gold-bar-sm"></div>
+        <p>
+          The research we publish, and the thinking behind it.
+        </p>
+      </div>
+
+      <div class="resources-grid">
+        {resources.map((item) => (
+          <a class="resource-card" href={item.href}>
+            <h2>{item.title}</h2>
+            <p>{item.blurb}</p>
+            <span class="resource-cue">Explore<span aria-hidden="true"> &#8594;</span></span>
+          </a>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .resources-section {
+    padding: 70px 2rem 90px;
+    background: #F7F8FA;
+    min-height: 60vh;
+  }
+
+  .resources-container {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .resources-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .resources-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    color: var(--navy-dark);
+    margin-bottom: 0.75rem;
+  }
+
+  .resources-header .gold-bar-sm {
+    margin: 0 auto;
+  }
+
+  .resources-header p {
+    margin-top: 1.25rem;
+    color: var(--slate);
+    font-size: 1.02rem;
+    line-height: 1.9;
+  }
+
+  .resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.75rem;
+  }
+
+  .resource-card {
+    display: block;
+    background: #fff;
+    border: 1px solid #e4e7ec;
+    border-radius: 14px;
+    padding: 1.9rem;
+    text-decoration: none;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+    transition: box-shadow 0.25s, transform 0.25s;
+  }
+
+  .resource-card:hover {
+    box-shadow: 0 10px 28px rgba(15, 36, 64, 0.14);
+    transform: translateY(-4px);
+  }
+
+  .resource-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    color: var(--navy-dark);
+    margin-bottom: 0.75rem;
+  }
+
+  .resource-card p {
+    color: var(--slate);
+    font-size: 0.99rem;
+    line-height: 1.85;
+    margin-bottom: 1.1rem;
+  }
+
+  .resource-cue {
+    color: var(--gold-warm);
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 600px) {
+    .resources-section {
+      padding: 50px 1.25rem 70px;
+    }
+  }
+</style>

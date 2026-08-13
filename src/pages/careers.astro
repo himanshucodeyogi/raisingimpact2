@@ -1,0 +1,214 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const openings = [
+  {
+    position: 'Research Analyst',
+    type: 'Full time',
+    location: 'Bangalore/Mumbai/Delhi',
+    jd: '/Raising Impact - JD for Research Analyst.pdf',
+  },
+  {
+    position: 'Researcher',
+    type: 'Full time',
+    location: 'Bangalore/Mumbai/Delhi',
+    jd: '/Raising Impact - JD for Researcher.pdf',
+  },
+];
+---
+
+<Layout
+  title="Careers — Raising Impact"
+  description="Join Raising Impact — a small, tight-knit team working on evidence-led philanthropy. View our current openings and apply."
+>
+
+  <section class="careers-section">
+    <div class="careers-container">
+
+      <div class="careers-header">
+        <h1>Careers</h1>
+        <div class="gold-bar-sm"></div>
+      </div>
+
+      <div class="careers-intro">
+        <h2>Working at Raising Impact</h2>
+        <p>
+          We're a small, tight-knit team that moves fast, stays close to evidence,
+          and we hold ourselves to the same rigour we ask of the organisations we
+          advise. We're collaborative, and give people real ownership over their
+          work early on.
+        </p>
+      </div>
+
+      <div class="careers-interested">
+        <h3>Interested?</h3>
+        <p>
+          If this sounds like the kind of work you want to do and the kind of team
+          you want to be part of, we'd like to hear from you. Please write to
+          <a href="mailto:info@raisingimpact.org">info@raisingimpact.org</a>
+        </p>
+      </div>
+
+      <div class="careers-openings">
+        <h3>Current Openings</h3>
+        <div class="openings-grid">
+          {openings.map((job) => (
+            <div class="opening-card">
+              <h4>{job.position}</h4>
+              <ul class="opening-meta">
+                <li><span>Employment type:</span> {job.type}</li>
+                <li><span>Location:</span> {job.location}</li>
+              </ul>
+              <p class="jd-line">
+                Click <a class="jd-link" href={job.jd} download>here</a> to download the job description
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .careers-section {
+    padding: 70px 2rem 90px;
+    background: #F7F8FA;
+    min-height: 60vh;
+  }
+
+  .careers-container {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .careers-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .careers-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    color: var(--navy-dark);
+    margin-bottom: 0.75rem;
+  }
+
+  .careers-header .gold-bar-sm {
+    margin: 0 auto;
+  }
+
+  .careers-intro h2,
+  .careers-interested h3,
+  .careers-openings h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--navy-dark);
+    margin-bottom: 0.75rem;
+  }
+
+  .careers-intro h2 {
+    font-size: clamp(1.35rem, 3vw, 1.7rem);
+  }
+
+  .careers-interested h3,
+  .careers-openings h3 {
+    font-size: clamp(1.15rem, 2.5vw, 1.4rem);
+  }
+
+  .careers-intro p,
+  .careers-interested p {
+    color: var(--navy-dark);
+    line-height: 1.9;
+    font-size: 1.02rem;
+  }
+
+  .careers-intro {
+    margin-bottom: 2.5rem;
+  }
+
+  .careers-interested {
+    margin-bottom: 3rem;
+  }
+
+  .careers-interested a {
+    color: var(--gold-warm);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+
+  .careers-interested a:hover {
+    border-bottom-color: var(--gold-warm);
+  }
+
+  .openings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .opening-card {
+    background: #fff;
+    border: 1px solid #e4e7ec;
+    border-radius: 14px;
+    padding: 1.75rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+    transition: box-shadow 0.25s, transform 0.25s;
+  }
+
+  .opening-card:hover {
+    box-shadow: 0 10px 28px rgba(15, 36, 64, 0.14);
+    transform: translateY(-4px);
+  }
+
+  .opening-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: var(--navy-dark);
+    margin-bottom: 1rem;
+  }
+
+  .opening-meta {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.25rem;
+  }
+
+  .opening-meta li {
+    color: var(--navy-dark);
+    line-height: 1.8;
+    font-size: 0.97rem;
+  }
+
+  .opening-meta li span {
+    font-weight: 600;
+  }
+
+  .jd-line {
+    color: var(--navy-dark);
+    font-size: 0.97rem;
+    line-height: 1.8;
+  }
+
+  .jd-link {
+    color: var(--gold-warm);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s;
+  }
+
+  .jd-link:hover {
+    color: var(--gold);
+  }
+
+  @media (max-width: 600px) {
+    .careers-section {
+      padding: 50px 1.25rem 70px;
+    }
+  }
+</style>

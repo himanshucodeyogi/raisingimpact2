@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img" aria-labelledby="fig3Title">
+  <title id="fig3Title">The evidence ladder, from meta-analyses and systematic reviews at the top down to expert consensus at the base; and what we triangulate when the top rungs are empty for India: strong international evidence, public data from bodies such as NITI Aayog and the RBI, and monitoring data from implementing organisations.</title>
+
+  <rect x="0.75" y="0.75" width="1198.5" height="598.5" rx="14" fill="#FFFFFF" stroke="#E4E7EC" stroke-width="1.5" />
+
+  <text x="60" y="64" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="17" font-weight="700"
+        letter-spacing="3" fill="#C4973F">EVIDENCE TAXONOMY</text>
+
+  <text x="60" y="120" font-family="Georgia, 'Times New Roman', serif" font-size="23" fill="#0F2440">The evidence ladder</text>
+  <text x="648" y="120" font-family="Georgia, 'Times New Roman', serif" font-size="23" fill="#0F2440">When the top rungs are empty for India</text>
+
+  <!-- upward arrow -->
+  <g stroke="#C09D4B" stroke-width="2" fill="none">
+    <line x1="82" y1="545" x2="82" y2="168" />
+  </g>
+  <polygon points="82,156 88,172 76,172" fill="#C09D4B" />
+  <text transform="rotate(-90 44 355)" x="44" y="355" text-anchor="middle"
+        font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="600"
+        letter-spacing="2.2" fill="#7A92AA">MORE WEIGHT IT CAN BEAR</text>
+
+  <!-- ladder rungs, strongest at the top -->
+  <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="19">
+    <rect x="108" y="160" width="460" height="56" rx="8" fill="#0F2440" />
+    <text x="132" y="195" fill="#FFFFFF">Meta-analyses and systematic reviews</text>
+
+    <rect x="108" y="225" width="460" height="56" rx="8" fill="#1B3B5C" />
+    <text x="132" y="260" fill="#FFFFFF">Randomised controlled trials</text>
+
+    <rect x="108" y="290" width="460" height="56" rx="8" fill="#2A5680" />
+    <text x="132" y="325" fill="#FFFFFF">Quasi-experimental studies</text>
+
+    <rect x="108" y="355" width="460" height="56" rx="8" fill="#3A6D9C" />
+    <text x="132" y="390" fill="#FFFFFF">Cohort studies</text>
+
+    <rect x="108" y="420" width="460" height="56" rx="8" fill="#A9BBCE" />
+    <text x="132" y="455" fill="#0F2440">Pre-post studies</text>
+
+    <rect x="108" y="485" width="460" height="56" rx="8" fill="#D7DEE6" />
+    <text x="132" y="520" fill="#0F2440">Expert consensus</text>
+  </g>
+
+  <line x1="608" y1="150" x2="608" y2="560" stroke="#E4E7EC" stroke-width="1.5" />
+
+  <!-- broadened sources -->
+  <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18" fill="#0F2440">
+    <rect x="648" y="160" width="492" height="72" rx="10" fill="#F7F9FB" stroke="#DDE3EA" stroke-width="1.5" />
+    <circle cx="678" cy="196" r="5" fill="#C09D4B" />
+    <text x="700" y="203">Strong international evidence</text>
+
+    <rect x="648" y="246" width="492" height="72" rx="10" fill="#F7F9FB" stroke="#DDE3EA" stroke-width="1.5" />
+    <circle cx="678" cy="282" r="5" fill="#C09D4B" />
+    <text x="700" y="289">Public data &#8212; NITI Aayog, RBI</text>
+
+    <rect x="648" y="332" width="492" height="72" rx="10" fill="#F7F9FB" stroke="#DDE3EA" stroke-width="1.5" />
+    <circle cx="678" cy="368" r="5" fill="#C09D4B" />
+    <text x="700" y="375">Monitoring data from implementers</text>
+  </g>
+
+  <!-- converge -->
+  <line x1="894" y1="404" x2="894" y2="438" stroke="#C09D4B" stroke-width="2" />
+  <polygon points="894,452 888,436 900,436" fill="#C09D4B" />
+
+  <rect x="648" y="458" width="492" height="86" rx="10" fill="#0F2440" />
+  <rect x="676" y="482" width="40" height="3" rx="1.5" fill="#C09D4B" />
+  <text x="676" y="522" font-family="Georgia, 'Times New Roman', serif" font-size="22" fill="#FFFFFF">Triangulated estimate for India</text>
+</svg>

@@ -136,9 +136,14 @@ img {
   list-style: none;
   display: flex;
   gap: 2.5rem;
+  align-items: center;
 }
 
+/* every nav link gets the same box model, so the one with a caret sits on the
+   same line as the rest instead of picking up a shifted inline-flex baseline */
 .site-nav a {
+  display: inline-flex;
+  align-items: center;
   color: var(--darkest-navy);
   text-decoration: none;
   font-size: 1rem;
@@ -153,6 +158,81 @@ img {
 .site-nav a.active {
   color: var(--rich-gold);
   border-bottom-color: var(--rich-gold);
+}
+
+/* ── NAV DROPDOWN ── */
+.site-nav .has-dropdown {
+  position: relative;
+}
+
+.site-nav .has-dropdown > a {
+  gap: 0.4rem;
+}
+
+.dropdown-caret {
+  width: 10px;
+  height: 7px;
+  flex-shrink: 0;
+  transition: transform 0.25s;
+}
+
+.site-nav .has-dropdown:hover .dropdown-caret,
+.site-nav .has-dropdown:focus-within .dropdown-caret {
+  transform: rotate(180deg);
+}
+
+.site-nav .dropdown-menu {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 6px);
+  min-width: 170px;
+  padding: 0.4rem 0;
+  margin-top: 0.55rem;
+  list-style: none;
+  background-color: var(--white);
+  border: 1px solid var(--soft-bg);
+  border-radius: 10px;
+  box-shadow: 0 12px 28px rgba(15, 36, 64, 0.14);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
+}
+
+/* invisible bridge so the menu stays open while the cursor travels to it */
+.site-nav .dropdown-menu::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -0.7rem;
+  height: 0.7rem;
+}
+
+.site-nav .has-dropdown:hover .dropdown-menu,
+.site-nav .has-dropdown:focus-within .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+
+.site-nav .dropdown-menu a {
+  display: block;
+  padding: 0.6rem 1.2rem;
+  border-bottom: none;
+  white-space: nowrap;
+  font-size: 0.97rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.site-nav .dropdown-menu a:hover,
+.site-nav .dropdown-menu a.active {
+  color: var(--rich-gold);
+  background-color: #F7F8FA;
+  border-bottom-color: transparent;
 }
 
 /* ── FOOTER ── */
@@ -1293,13 +1373,15 @@ img {
   }
 
   .site-header.nav-open .site-nav {
-    max-height: 400px;
+    max-height: 620px;
+    overflow-y: auto;
   }
 
   .site-nav ul {
     flex-direction: column;
     gap: 0;
     padding: 0.5rem 0;
+    align-items: stretch;
   }
 
   .site-nav li {
@@ -1322,6 +1404,51 @@ img {
   .site-nav a.active {
     background-color: var(--beige);
     border-bottom-color: transparent;
+  }
+
+  /* dropdown flattens into the drawer on mobile — no hover to rely on */
+  .site-nav .has-dropdown > a {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .site-nav .has-dropdown:hover .dropdown-caret,
+  .site-nav .has-dropdown:focus-within .dropdown-caret {
+    transform: none;
+  }
+
+  .site-nav .dropdown-menu,
+  .site-nav .has-dropdown:hover .dropdown-menu,
+  .site-nav .has-dropdown:focus-within .dropdown-menu {
+    position: static;
+    left: auto;
+    top: auto;
+    transform: none;
+    min-width: 0;
+    margin-top: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    background-color: #F7F8FA;
+  }
+
+  .site-nav .dropdown-menu::before { display: none; }
+
+  .site-nav .dropdown-menu li {
+    border-bottom: 1px solid var(--soft-bg);
+  }
+
+  .site-nav .dropdown-menu li:last-child {
+    border-bottom: none;
+  }
+
+  .site-nav .dropdown-menu a {
+    padding: 0.8rem 1.5rem 0.8rem 2.6rem;
+    font-size: 0.95rem;
   }
 
   .hero { padding: 4rem 1.2rem 3.5rem; }

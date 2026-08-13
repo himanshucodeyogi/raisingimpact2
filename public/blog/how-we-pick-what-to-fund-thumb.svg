@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-labelledby="thumbTitle2">
+  <title id="thumbTitle2">Everyone agrees philanthropy should fund what works. The harder question is how you know what works. Here is our process, from cause selection to cost-effectiveness.</title>
+
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F2440" />
+      <stop offset="55%" stop-color="#16304F" />
+      <stop offset="100%" stop-color="#203C55" />
+    </linearGradient>
+    <radialGradient id="glow2">
+      <stop offset="0%" stop-color="#C09D4B" stop-opacity="0.22" />
+      <stop offset="55%" stop-color="#C09D4B" stop-opacity="0.09" />
+      <stop offset="100%" stop-color="#C09D4B" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg2)" />
+
+  <!-- soft gold glow, bottom right -->
+  <circle cx="1105" cy="575" r="300" fill="url(#glow2)" />
+
+  <!-- top rule + kicker -->
+  <rect x="90" y="92" width="72" height="4" rx="2" fill="#C09D4B" />
+  <text x="90" y="142" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="600"
+        letter-spacing="3.4" fill="#D2B980">METHODOLOGY &#183; PART ONE</text>
+
+  <!-- standfirst -->
+  <text font-family="Georgia, 'Times New Roman', serif" font-size="46" fill="#FFFFFF">
+    <tspan x="90" y="268">Everyone agrees philanthropy should</tspan>
+    <tspan x="90" y="334">fund &#8220;what works.&#8221; The harder question</tspan>
+    <tspan x="90" y="400">is how you know what works.</tspan>
+    <tspan x="90" y="472" fill="#D2B980">Here is our process, start to finish.</tspan>
+  </text>
+
+  <!-- bottom rule -->
+  <rect x="90" y="536" width="1020" height="1" fill="#FFFFFF" opacity="0.16" />
+</svg>
